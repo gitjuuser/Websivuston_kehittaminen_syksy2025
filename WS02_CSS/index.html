@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fi">
-
-</html>
 
 <head>
+    <html lang="fi">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         h1 {
             color: green;
@@ -12,55 +12,63 @@
 
     <title>Ensimmäinen HTML verkkosivuni</title>
     <link rel="stylesheet" href="styles/styles.css">
-
 </head>
 
-<!--H1 HEADER-->
-
 <body>
+    <!--H1 HEADER-->
+
+
     <h1 style="color: red;">This is a heading</h1>
     <p>Tämä on verkkosivusto</p>
     <img src="./images/cat.jpg" alt="kuva kissasta">
     <h2>Minua kiinnostavat asiat ja harrastukset</h2>
+
+    <!--ordered list-->
+
+    <ol>
+        <li>Audio</li>
+        <li>Tietokoneet</li>
+        <li>Data</li>
+    </ol>
+
+    <!--div elementti -->
+    <div class="content-box">
+        <h3>Tää on tosiaan div elementti eikö oo hieno</h3>
+        <p>Tämäpä tässä on esimerkki parakraaffi div elementin sisällä</p>
+    </div>
+
+    <!--Add a hyperlink to your favorite Web page using the <a> tag.-->
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Ilmainen fortnite</a>
+
+    <!--table and form -->
+    <table>
+        <tr>
+            <th>Kurssit</th>
+            <th>Käynnissä?</th>
+        </tr>
+        <tr>
+            <td>ICT ja pilvi-infra</td>
+            <td>EI</td>
+        </tr>
+        <tr>
+            <td>websivuston kehitys</td>
+            <td>KYLLÄ</td>
+        </tr>
+        <tr>
+            <td>Liiketoimintaympäristöt</td>
+            <td>KYLLÄ</td>
+    </table>
+
+    <!--SIMPLE FORM-->
+
+    <form>
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 
-
-<!--ordered list-->
-
-<ol>
-    <li>Audio</li>
-    <li>Tietokoneet</li>
-    <li>Data</li>
-</ol>
-
-<!--Add a hyperlink to your favorite Web page using the <a> tag.-->
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Ilmainen fortnite</a>
-
-<!--table and form -->
-<table>
-    <tr>
-        <th>Kurssit</th>
-        <th>Käynnissä?</th>
-    </tr>
-    <tr>
-        <td>ICT ja pilvi-infra</td>
-        <td>EI</td>
-    </tr>
-    <tr>
-        <td>websivuston kehitys</td>
-        <td>KYLLÄ</td>
-    </tr>
-    <tr>
-        <td>Liiketoimintaympäristöt</td>
-        <td>KYLLÄ</td>
-</table>
-
-<!--SIMPLE FORM-->
-
-<form>
-    <label for="name">Nimi:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="email">Sähköposti:</label>
-    <input type="email" id="email" name="email"><br><br>
-    <input type="submit" value="Submit">
-</form>
+</html>

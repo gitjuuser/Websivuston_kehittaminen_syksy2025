@@ -5,7 +5,7 @@
   }
   
   .box {
-    background-color: lightblue;
+    background-color: rgb(61, 255, 165);
     border-radius: 20px;
     width: 150px;
     padding: 10px;
@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    
   }
   
   .grid-item {
