@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DVD Screensaver Text</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+        height: 100vh;
+        width: 100vw;
+        font-family: Arial, sans-serif;
+        position: relative;
+    }
+
+    #dvd {
+        position: absolute;
+        color: #34ebcf;
+        font-size: 32px;
+        font-weight: bold;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    #disclaimer {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        opacity: 0.15; /* barely visible */
+        color: white;
+        pointer-events: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="dvd">Websivuston_kehittaminen_syksy2025</div>
+
+<div id="disclaimer">
+    This page was made with the assistance of chatpgt
+</div>
+
+<script>
+    const element = document.getElementById("dvd");
+    let x = 50;
+    let y = 50;
+    let dx = 2;
+    let dy = 2;
+
+    function animate() {
+        const rect = element.getBoundingClientRect();
+
+        if (x + rect.width >= window.innerWidth || x <= 0) {
+            dx *= -1;
+        }
+        if (y + rect.height >= window.innerHeight || y <= 0) {
+            dy *= -1;
+        }
+
+        x += dx;
+        y += dy;
+
+        element.style.left = x + "px";
+        element.style.top = y + "px";
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Adjust movement if window resizes
+    window.addEventListener("resize", () => {
+        x = Math.min(x, window.innerWidth - element.offsetWidth);
+        y = Math.min(y, window.innerHeight - element.offsetHeight);
+    });
+</script>
+
+</body>
+</html>
