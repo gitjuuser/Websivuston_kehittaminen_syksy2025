@@ -21,6 +21,7 @@
         font-weight: bold;
         user-select: none;
         white-space: nowrap;
+        transition: color 0.2s linear;
     }
 
     #disclaimer {
@@ -29,7 +30,7 @@
         width: 100%;
         text-align: center;
         font-size: 10px;
-        opacity: 0.15; /* barely visible */
+        opacity: 0.15;
         color: white;
         pointer-events: none;
     }
@@ -48,18 +49,35 @@
     const element = document.getElementById("dvd");
     let x = 50;
     let y = 50;
-    let dx = 2;
-    let dy = 2;
+    let dx = 2.2;
+    let dy = 2.2;
+
+    const colors = [
+        "#ff4d4d", "#4dff4d", "#4d4dff",
+        "#ffcc00", "#ff66cc", "#00e6e6",
+        "#ff884d", "#b84dff"
+    ];
+
+    function changeColor() {
+        const newColor = colors[Math.floor(Math.random() * colors.length)];
+        element.style.color = newColor;
+    }
 
     function animate() {
         const rect = element.getBoundingClientRect();
 
+        let bounced = false;
+
         if (x + rect.width >= window.innerWidth || x <= 0) {
             dx *= -1;
+            bounced = true;
         }
         if (y + rect.height >= window.innerHeight || y <= 0) {
             dy *= -1;
+            bounced = true;
         }
+
+        if (bounced) changeColor();
 
         x += dx;
         y += dy;
@@ -72,7 +90,6 @@
 
     animate();
 
-    // Adjust movement if window resizes
     window.addEventListener("resize", () => {
         x = Math.min(x, window.innerWidth - element.offsetWidth);
         y = Math.min(y, window.innerHeight - element.offsetHeight);
