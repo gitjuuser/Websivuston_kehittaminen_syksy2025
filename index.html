@@ -1,281 +1,110 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Access Terminal</title>
+<title>Websivuston kehittaminen syksy 2025</title>
 
 <style>
-    body, html { 
-        margin: 0; 
-        height: 100%; 
-        overflow: hidden; 
-        background: black; 
-        font-family: "Courier New", monospace;
-        color: #00ff8a;
-    }
-
-    /* MATRIX BACKGROUND */
-    #matrix {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-    }
-
-    /* LOGIN */
-    #loginBox {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #00ffcc;
-    }
-
-    #passwordInput {
-        background: black;
-        border: 1px solid #00ffcc;
-        color: #00ffcc;
-        padding: 10px 20px;
-        font-size: 22px;
-        outline: none;
-        width: 300px;
-        text-align: center;
-    }
-
-    #accessMsg {
-        margin-top: 20px;
-        font-size: 28px;
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-
-    #flash {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: black;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.5s;
-        z-index: 5;
-    }
-
-    /* CONTENT */
-    #mainContent {
-        display: none;
-        padding: 40px;
-        color: #00ff8a;
-    }
-
-    .sectionTitle {
-        font-size: 26px;
-        margin-top: 40px;
-        margin-bottom: 10px;
-        color: #00ffaa;
-        text-shadow: 0 0 8px #00ffaa;
-    }
-
-    /* DNA */
-    .dna {
-        font-size: 20px;
-        white-space: pre;
-        animation: dnaMove 3s linear infinite;
-        color: #00ffcc;
-    }
-
-    @keyframes dnaMove {
-        0%   { letter-spacing: 0px; }
-        50%  { letter-spacing: 6px; }
-        100% { letter-spacing: 0px; }
-    }
-
-    /* TERMINAL */
-    #terminal {
-        background: rgba(0, 0, 0, 0.4);
-        padding: 20px;
-        height: 250px;
-        overflow-y: hidden;
-        border: 1px solid #008866;
-    }
-
-    /* NEON MAP --------------------------------- */
-    #neonMapContainer {
-        margin-top: 40px;
-        width: 100%;
-        height: 350px;
-        position: relative;
+    body {
+        margin: 0;
         overflow: hidden;
-        border: 2px solid #00ffee;
-        box-shadow: 0 0 15px #00ffee;
+        background: black;
+        height: 100vh;
+        width: 100vw;
+        font-family: Arial, sans-serif;
+        position: relative;
     }
 
-    #neonMap {
-        width: 130%;
-        height: 130%;
-        background: radial-gradient(circle at center, #003366, #000010 60%, #000000);
-        background-size: cover;
+    /* The moving box */
+    #dvdBox {
         position: absolute;
-        top: -15%;
-        left: -15%;
-        opacity: 0.9;
-        animation: mapZoom 12s linear infinite;
-        filter: drop-shadow(0 0 12px #00eaff);
+        background-color: #34ebcf; /* initial color */
+        padding: 20px 30px;
+        border-radius: 10px;
+        user-select: none;
+        white-space: nowrap;
     }
 
-    @keyframes mapZoom {
-        0% { transform: scale(1) rotate(0deg); }
-        50% { transform: scale(1.05) rotate(1deg); }
-        100% { transform: scale(1) rotate(0deg); }
+    /* The text inside the box */
+    #dvdText {
+        color: white; 
+        font-size: 32px;
+        font-weight: bold;
     }
 
-    /* MAP GRID LINES */
-    .gridLine {
+    #disclaimer {
         position: absolute;
-        background: rgba(0, 255, 255, 0.18);
-    }
-
-    .mapLabel {
-        position: absolute;
-        color: #00ffee;
-        font-size: 13px;
-        text-shadow: 0 0 6px #00ffee;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        opacity: 0.15; 
+        color: white;
+        pointer-events: none;
     }
 </style>
 </head>
 
 <body>
 
-<canvas id="matrix"></canvas>
-
-<div id="flash"></div>
-
-<!-- LOGIN -->
-<div id="loginBox">
-    <h2>SECURE ACCESS TERMINAL</h2>
-    <input id="passwordInput" type="password" placeholder="ENTER PASSWORD">
-    <div id="accessMsg">ACCESS GRANTED</div>
+<!-- Bouncing colored box -->
+<div id="dvdBox">
+    <span id="dvdText">Websivuston_kehittaminen_syksy2025</span>
 </div>
 
-<!-- MAIN CONTENT -->
-<div id="mainContent">
-
-    <div class="sectionTitle">DNA SEQUENCE SIMULATION</div>
-    <div class="dna">
-ACGT--ACGT--ACGT--ACGT  
- T--A--TGCA--TGCA--T  
-AC--GT--AC--GT--ACG  
- TGC--A--TGC--A--TGCA
-    </div>
-
-    <div class="sectionTitle">IP ACTIVITY LOG</div>
-    <div>
-        192.168.14.22  → CONNECTION ESTABLISHED<br>
-        10.55.22.98    → PORT SCAN DETECTED<br>
-        172.16.220.5   → AUTH TOKEN ISSUED<br>
-        89.204.11.144  → ENCRYPTED CHANNEL OPEN<br>
-        203.188.55.9   → TRACE ROUTE COMPLETE<br>
-        51.22.94.201   → PACKET LOSS 0.2%<br>
-        144.77.10.33   → PACKET SNIFF DETECTED<br>
-        8.8.8.8        → PING RESPONSE 11ms<br>
-    </div>
-
-    <div class="sectionTitle">NEON GRID MAP</div>
-    <div id="neonMapContainer">
-        <div id="neonMap"></div>
-    </div>
-
-    <div class="sectionTitle">GEO-TRACE PACKETS</div>
-    <div>
-        NODE A12 → 60.224N / 24.938E → UPLINK STABLE<br>
-        NODE C33 → 48.856N / 2.352E  → ROUTE VARIATION<br>
-        NODE X90 → 35.689N / 139.692E → PULSE ACTIVE<br>
-        NODE Z01 → 40.712N / -74.006W → STREAM OVERLOAD<br>
-        NODE R55 → 51.507N / -0.128W → DECRYPTOR READY<br>
-        NODE B04 → 64.128N / -21.827E → SIGNAL WEAK<br>
-    </div>
-
-    <div class="sectionTitle">SYSTEM STREAM</div>
-    <div id="terminal"></div>
-
+<div id="disclaimer">
+    This page was made with the assistance of chatpgt
 </div>
 
 <script>
-/* MATRIX EFFECT */
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
+    const element = document.getElementById("dvdBox");
+    let x = 50;
+    let y = 50;
+    let dx = 1.3;   // adjust for speed
+    let dy = 1.3;
 
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+    const colors = [
+        "#ff4d4d", "#4dff4d", "#4d4dff",
+        "#ffcc00", "#ff66cc", "#00e6e6",
+        "#ff884d", "#b84dff"
+    ];
 
-const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const fontSize = 16;
-const columns = canvas.width / fontSize;
-const drops = [];
-
-for (let i = 0; i < columns; i++) drops[i] = 1;
-
-function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#00ff80";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = chars[Math.floor(Math.random() * chars.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
-            drops[i] = 0;
-
-        drops[i]++;
+    function changeColor() {
+        const newColor = colors[Math.floor(Math.random() * colors.length)];
+        element.style.backgroundColor = newColor;  // box changes color
     }
-}
-setInterval(drawMatrix, 35);
 
+    function animate() {
+        const rect = element.getBoundingClientRect();
+        let bounced = false;
 
-/* LOGIN */
-const input = document.getElementById("passwordInput");
-const accessMsg = document.getElementById("accessMsg");
-const flash = document.getElementById("flash");
-const loginBox = document.getElementById("loginBox");
-const mainContent = document.getElementById("mainContent");
+        if (x + rect.width >= window.innerWidth || x <= 0) {
+            dx *= -1;
+            bounced = true;
+        }
+        if (y + rect.height >= window.innerHeight || y <= 0) {
+            dy *= -1;
+            bounced = true;
+        }
 
-input.addEventListener("keyup", () => {
-    if (input.value.length > 0) {
-        flash.style.opacity = 1;
+        if (bounced) changeColor();
 
-        setTimeout(() => {
-            flash.style.opacity = 0;
-            accessMsg.style.opacity = 1;
+        x += dx;
+        y += dy;
 
-            setTimeout(() => {
-                loginBox.style.display = "none";
-                mainContent.style.display = "block";
-            }, 1500);
+        element.style.left = x + "px";
+        element.style.top = y + "px";
 
-        }, 600);
+        requestAnimationFrame(animate);
     }
-});
 
+    animate();
 
-/* TERMINAL STREAM */
-const terminal = document.getElementById("terminal");
-
-function addTerminalLine() {
-    const line = 
-        "> ROUTE " + (Math.random()*99999).toFixed(0) + 
-        " :: " + ["ACTIVE","OK","SYNC","PROBE","SCANNING","CONFIRMED"][Math.floor(Math.random()*6)] +
-        " :: PING " + (Math.random()*50).toFixed(2) + "ms";
-
-    terminal.innerHTML += line + "<br>";
-
-    terminal.scrollTop = terminal.scrollHeight;
-}
-
-setInterval(addTerminalLine, 200);
+    // Keep it in bounds on window resize
+    window.addEventListener("resize", () => {
+        x = Math.min(x, window.innerWidth - element.offsetWidth);
+        y = Math.min(y, window.innerHeight - element.offsetHeight);
+    });
 </script>
 
 </body>
