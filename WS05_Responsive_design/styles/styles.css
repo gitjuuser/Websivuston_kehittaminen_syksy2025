@@ -1,0 +1,56 @@
+/*Task 1: Create a Responsive Layout*/
+.responsive-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .column {
+      flex: 1;
+      padding: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+    }
+
+/* Task 2: Add a Responsive Image */
+.responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Task 3: Use Media Queries */
+    .media-query-box {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+      .media-query-box {
+        background-color: lightcoral;
+      }
+    }
+    
+    @media (min-width: 601px) {
+      .media-query-box {
+        background-color: lightblue;
+      }
+    }
+
+    /* Task 4: Create a Responsive Navigation Bar */
+    .responsive-nav .nav-list {
+      display: flex;
+      list-style: none;
+    }
+    
+    @media (max-width: 600px) {
+      .responsive-nav .nav-list {
+        display: none;
+      }
+    
+      .responsive-nav .menu-toggle {
+        display: block;
+      }
+    }
