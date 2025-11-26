@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Websivuston kehittaminen syksy 2025</title>
 
 <style>
@@ -20,7 +21,7 @@
         position: absolute;
         background-color: #34ebcf; /* initial color */
         padding: 20px 30px;
-        border-radius: 10px;
+        border-radius: 0px;
         user-select: none;
         white-space: nowrap;
     }
@@ -60,8 +61,8 @@
     const element = document.getElementById("dvdBox");
     let x = 50;
     let y = 50;
-    let dx = 1.3;   // adjust for speed
-    let dy = 1.3;
+    let dx = 1.2;   // adjust for speed
+    let dy = 1.2;
 
     const colors = [
         "#ff4d4d", "#4dff4d", "#4d4dff",
@@ -105,6 +106,7 @@
         x = Math.min(x, window.innerWidth - element.offsetWidth);
         y = Math.min(y, window.innerHeight - element.offsetHeight);
     });
+    
 </script>
 
 </body>
