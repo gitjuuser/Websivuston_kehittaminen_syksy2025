@@ -9,14 +9,40 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap JavaScript (place before closing </body> tag) -->
+    <!-- Custom dark theme -->
+    <style>
+        /* koko sivun tumma tausta ja vaalea teksti */
+        html,
+        body {
+            background-color: #121212;
+            color: #eaeaea;
+            height: 100%;
+        }
+
+        /* linkit hieman korostetummaksi */
+        a {
+            color: #9ecbff;
+        }
+
+        a:hover {
+            color: #cfe9ff;
+        }
+
+        /* bootstrap navbar dark - varmistus, jos käytät omaa nav-tyyliä */
+        .navbar-dark .navbar-nav .nav-link,
+        .navbar-dark .navbar-brand {
+            color: #eaeaea;
+        }
+    </style>
+
+    <!-- Bootstrap JavaScript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
     <!--Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Hakemisto</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -41,12 +67,15 @@
                     <li class="nav-item">
                         <a class="nav-link"
                             href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS03_CSS_Layout/index.html">WS03_CSS_Layout</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link"
                             href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS04_Layout/index.html">WS04_Layout</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link"
                             href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS05_Responsive_design/index.html">WS05_Responsive_design</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link"
                             href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS06_introduction_to_bootstrap/index.html">WS06_introduction_to_bootstrap</a>
