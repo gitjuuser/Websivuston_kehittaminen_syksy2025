@@ -1,113 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Websivuston kehittaminen syksy 2025</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSK25-hakemisto</title>
 
-<style>
-    body {
-        margin: 0;
-        overflow: hidden;
-        background: black;
-        height: 100vh;
-        width: 100vw;
-        font-family: Arial, sans-serif;
-        position: relative;
-    }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    /* The moving box */
-    #dvdBox {
-        position: absolute;
-        background-color: #34ebcf; /* initial color */
-        padding: 20px 30px;
-        border-radius: 0px;
-        user-select: none;
-        white-space: nowrap;
-    }
-
-    /* The text inside the box */
-    #dvdText {
-        color: white; 
-        font-size: 32px;
-        font-weight: bold;
-    }
-
-    #disclaimer {
-        position: absolute;
-        bottom: 5px;
-        width: 100%;
-        text-align: center;
-        font-size: 10px;
-        opacity: 0.15; 
-        color: white;
-        pointer-events: none;
-    }
-</style>
+    <!-- Bootstrap JavaScript (place before closing </body> tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
-<!-- Bouncing colored box -->
-<div id="dvdBox">
-    <span id="dvdText">WSK25</span>
-</div>
-
-<div id="disclaimer">
-    This page was made with the assistance of chatpgt
-</div>
-
-<script>
-    const element = document.getElementById("dvdBox");
-    let x = 50;
-    let y = 50;
-    let dx = 1.2;   // adjust for speed
-    let dy = 1.2;
-
-    const colors = [
-        "#ff4d4d", "#4dff4d", "#4d4dff",
-        "#ffcc00", "#ff66cc", "#00e6e6",
-        "#ff884d", "#b84dff"
-    ];
-
-    function changeColor() {
-        const newColor = colors[Math.floor(Math.random() * colors.length)];
-        element.style.backgroundColor = newColor;  // box changes color
-    }
-
-    function animate() {
-        const rect = element.getBoundingClientRect();
-        let bounced = false;
-
-        if (x + rect.width >= window.innerWidth || x <= 0) {
-            dx *= -1;
-            bounced = true;
-        }
-        if (y + rect.height >= window.innerHeight || y <= 0) {
-            dy *= -1;
-            bounced = true;
-        }
-
-        if (bounced) changeColor();
-
-        x += dx;
-        y += dy;
-
-        element.style.left = x + "px";
-        element.style.top = y + "px";
-
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-
-    // Keep it in bounds on window resize
-    window.addEventListener("resize", () => {
-        x = Math.min(x, window.innerWidth - element.offsetWidth);
-        y = Math.min(y, window.innerHeight - element.offsetHeight);
-    });
-    
-</script>
+    <!--Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hakemisto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page"
+                            href="https://github.com/gitjuuser/Websivuston_kehittaminen_syksy2025">Websivuston kehitys
+                            2025 Github repositorio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS01_HTML/index.html">WS01_HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS02_CSS/index.html">WS02_CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS03_CSS_Layout/index.html">WS03_CSS_Layout</a>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS04_Layout/index.html">WS04_Layout</a>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS05_Responsive_design/index.html">WS05_Responsive_design</a>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS06_introduction_to_bootstrap/index.html">WS06_introduction_to_bootstrap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 </body>
+
 </html>
