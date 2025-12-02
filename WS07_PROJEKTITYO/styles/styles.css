@@ -1,0 +1,17 @@
+/* koko sivun tumma tausta ja vaalea teksti */
+
+html,
+body {
+  background-color: #ffffff;
+  color: #eaeaea;
+  height: 100%;
+}
+
+
+.content-box {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
