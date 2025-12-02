@@ -14,3 +14,4 @@ Moduuli 5
 Responsive design 
 Moduuli 6
 Introduction to Bootstrap 
+https://getbootstrap.com/docs/5.3/components/navs-tabs/
