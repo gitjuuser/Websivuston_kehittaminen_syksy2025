@@ -2,11 +2,11 @@
 
 html,
 body {
-  background-color: #cccccc;
+  background-color: #e7e7e7;
   color: #eaeaea;
   height: 100%;
 }
-
+/* Keskitetty tekstin laatikko tummalla taustalla ja vaalealla tekstillä */
 .content-box {
   background-color: #2e2e2e;
   color: #ffffff;
@@ -14,7 +14,7 @@ body {
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+/* Keskitetty tekstin laatikko vaalealla taustalla ja tummalla tekstillä */
 .text-centerblack {
   background-color: #ffffff;
   color: #000000;
@@ -23,6 +23,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Kuvien tyylit */
 .img-thumbnail {
   display: block;
   margin: auto;
@@ -31,11 +32,21 @@ body {
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Lomakkeen tyylit */
 .form-control {
   max-width: 40%;
   background-color: #ffffff;
   color: #ffffff;
   padding: 10px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Lomakkeen laatikon tyyli */
+.content-box-form {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
