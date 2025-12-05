@@ -2,7 +2,7 @@
 
 html,
 body {
-  background-color: #ffffff;
+  background-color: #cccccc;
   color: #eaeaea;
   height: 100%;
 }
@@ -19,7 +19,7 @@ body {
   background-color: #ffffff;
   color: #000000;
   padding: 20px;
-  border-radius: 0px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,5 +29,13 @@ body {
   width: 70%;
   padding: 10px;
   border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-control {
+  max-width: 40%;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
