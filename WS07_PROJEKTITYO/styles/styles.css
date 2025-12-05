@@ -14,3 +14,20 @@ body {
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.text-centerblack {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-thumbnail {
+  display: block;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

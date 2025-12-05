@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>elokuvat</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>elokuvat</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JavaScript (place before closing </body> tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap JavaScript (place before closing </body> tag) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="./styles/styles.css">
+  <body>
+    <div class="content-box">
+      <h1 class="text-center">Elokuvat</h1>
+      <p class="text-center">Tällä sivulla puhutaan elokuvista.</p>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/index.html"
+            >kotisivu</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/elokuvat.html"
+            >Elokuvat</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/tietokoneet.html"
+            >Tietokoneet</a
+          >
+        </li>
 
-</head>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/musiikki.html"
+            >Musiikki</a
+          >
+        </li>
+      </ul>
+    </div>
 
-<body>
+    <div class="container-fluid">
+      <h2 class="text-centerblack">Elokuvien maailma</h2>
+      <p class="text-centerblack">
+        Elokuvat ovat visuaalinen tapa kertoa tarinoita ja herättää tunteita. Ne
+        tarjoavat elämyksiä, jotka voivat viedä meidät toisiin maailmoihin,
+        kertoa historiallisia tapahtumia tai käsitellä arkisia aiheita
+        koskettavalla tavalla. Elokuvagenrejä löytyy laidasta laitaan:
+        toiminnasta komediaan, sci-fistä kauhuun ja draamasta animaatioihin.
+        Elokuvateknologia kehittyy jatkuvasti. Modernit erikoistehosteet,
+        3D-kuvaus ja laadukas äänentoisto tekevät katselukokemuksesta entistä
+        vaikuttavamman. Samalla myös indie-elokuvat ja pienemmät tuotannot ovat
+        nousseet suosioon, tarjoten tuoreita näkökulmia ja kokeilevia
+        tarinankerronnan tapoja.
+      </p>
+    </div>
 
-  <div class="content-box">
-    <h1 class="text-center">Elokuvat</h1>
-    <p class="text-center">Tällä sivulla asiaa elokuvista!</p>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link"
-          href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/index.html">kotisivu</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page"
-          href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/elokuvat.html">Elokuvat</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"
-          href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/tietokoneet.html">Tietokoneet</a>
-      <li class="nav-item">
-        <a class="nav-link"
-          href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/musiikki.html">Musiikki</a>
-      </li>
-    </ul>
-  </div>
+    <!--movie pictures-->
 
+    <img
+      src="./images/gladiator elokuva.jpeg.jpeg"
+      class="img-thumbnail"
+      alt="gladiator elokuva"
+    />
 
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
+    <img
+      src="./images/sisu elokuva.jpg"
+      class="img-thumbnail"
+      alt="sisu elokuva"
+    />
+  </body>
 </html>
