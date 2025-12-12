@@ -35,13 +35,22 @@ body {
 
 /* Lomakkeen tyylit */
 .form-control {
-  max-width: 40%;
+  display: block;
+  margin: auto;
+  max-width: 80%;
   background-color: #ffffff;
   color: #ffffff;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.form-label {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+}
+
 /* Lomakkeen laatikon tyyli */
 .content-box-form {
   background-color: #2e2e2e;
