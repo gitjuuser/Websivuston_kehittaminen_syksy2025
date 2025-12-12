@@ -27,7 +27,7 @@ body {
 .img-thumbnail {
   display: block;
   margin: auto;
-  width: 70%;
+  width: 85%;
   padding: 10px;
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
