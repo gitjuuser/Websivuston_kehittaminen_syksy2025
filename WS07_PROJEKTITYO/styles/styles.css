@@ -61,7 +61,7 @@ body {
 }
 
 footer {
- position: fixed;
+ position: bottom;
   bottom: 0;
   width: 100%;
   padding-top: 10px;
