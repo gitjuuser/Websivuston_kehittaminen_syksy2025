@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WSK25-hakemisto</title>
+    <title>WSK25 – Hakemisto</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -11,114 +11,181 @@
       rel="stylesheet"
     />
 
-    <!-- Custom dark theme -->
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <style>
-      /* koko sivun tumma tausta ja vaalea teksti */
       html,
       body {
-        background-color: #121212;
+        background-color: #0f1115;
         color: #eaeaea;
         height: 100%;
       }
 
-      /* linkit hieman korostetummaksi */
       a {
-        color: #9ecbff;
+        text-decoration: none;
       }
 
-      a:hover {
-        color: #cfe9ff;
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, #1f2933, #0f172a);
+        padding: 4rem 1rem;
+        border-bottom: 1px solid #2a2f3a;
       }
 
-      /* bootstrap navbar dark - varmistus, jos käytät omaa nav-tyyliä */
-      .navbar-dark .navbar-nav .nav-link,
-      .navbar-dark .navbar-brand {
-        color: #eaeaea;
+      /* Cards */
+      .card {
+        background-color: #151922;
+        border: 1px solid #2a2f3a;
+        transition: all 0.25s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(100, 181, 246, 0.35);
+      }
+
+      .card i {
+        font-size: 2rem;
+        color: #64b5f6;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #0b0d12;
       }
     </style>
 
-    <!-- Bootstrap JavaScript-->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body>
-    <!--Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hakemisto</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">WSK25</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-target="#nav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a
                 class="nav-link"
-                aria-current="page"
                 href="https://github.com/gitjuuser/Websivuston_kehittaminen_syksy2025"
-                >Websivuston kehitys 2025 Github repositorio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS01_HTML/index.html"
-                >WS01_HTML</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS02_CSS/index.html"
-                >WS02_CSS</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS03_CSS_Layout/index.html"
-                >WS03_CSS_Layout</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS04_Layout/index.html"
-                >WS04_Layout</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS05_Responsive_design/index.html"
-                >WS05_Responsive_design</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS06_introduction_to_bootstrap/index.html"
-                >WS06_introduction_to_bootstrap</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/index.html"
-                >WS07_PROJEKTITYO</a
+                >GitHub sivuni</a
               >
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- Hero -->
+    <section class="hero text-center">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Websivuston kehittäminen 2025</h1>
+        <p class="lead text-muted mt-3">
+          Kurssin harjoitustyöt ja projektit yhdessä näkymässä
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <main class="container py-5">
+      <div class="row g-4">
+        <!-- WS01 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS01_HTML/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-code-slash"></i>
+              <h5 class="mt-3">WS01 – HTML</h5>
+              <p>HTML-rakenne ja perusteet</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- WS02 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS02_CSS/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-palette"></i>
+              <h5 class="mt-3">WS02 – CSS</h5>
+              <p>Tyylit ja ulkoasu</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- WS03 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS03_CSS_Layout/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-layout-text-window"></i>
+              <h5 class="mt-3">WS03 – Layout</h5>
+              <p>CSS Grid & Flexbox</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- WS04 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS04_Layout/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-columns-gap"></i>
+              <h5 class="mt-3">WS04 – Layout</h5>
+              <p>Monipalstaiset rakenteet</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- WS05 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS05_Responsive_design/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-phone"></i>
+              <h5 class="mt-3">WS05 – Responsive</h5>
+              <p>Responsiivinen suunnittelu</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- WS06 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS06_introduction_to_bootstrap/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-bootstrap"></i>
+              <h5 class="mt-3">WS06 – Bootstrap</h5>
+              <p>Bootstrap-perusteet</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- WS07 -->
+        <div class="col-md-4">
+          <a href="https://gitjuuser.github.io/Websivuston_kehittaminen_syksy2025/WS07_PROJEKTITYO/index.html">
+            <div class="card h-100 text-light p-3">
+              <i class="bi bi-kanban"></i>
+              <h5 class="mt-3">WS07 – Projektityö</h5>
+              <p>Kurssin lopputyö</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-auto border-top border-secondary">
+      <small class="text-muted">chatgpt made it 🤖</small>
+    </footer>
   </body>
 </html>
